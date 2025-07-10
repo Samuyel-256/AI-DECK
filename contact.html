@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | AI Deck</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0c10;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f2833;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #66fcf1;
+      letter-spacing: 1px;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #1f2833;
+      color: #66fcf1;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease;
+    }
+
+    .contact-container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-container p {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+    }
+
+    .email-box {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      background: #0b0c10;
+      display: inline-block;
+      padding: 12px 24px;
+      border: 2px dashed #66fcf1;
+      border-radius: 10px;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .email-box:hover {
+      background-color: #66fcf1;
+      color: #0b0c10;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #45a29e;
+    }
+
+    .back-button {
+      margin-top: 25px;
+      background-color: #66fcf1;
+      color: #0b0c10;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #45a29e;
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1f2833;
+      color: #c5c6c7;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+
+      .back-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact AI Deck</h1>
+  </header>
+
+  <div class="contact-container">
+    <h2>📬 Reach Out Anytime</h2>
+    <p>Got feedback, ideas, or just wanna say hi? We're just one email away:</p>
+
+    <div class="email-box" onclick="window.location.href='mailto:aideck@gmail.com'">
+      ✉️ aideck@gmail.com
+    </div>
+
+    <p class="note">We usually respond within 24 hours. Let's build cool stuff together! 🚀</p>
+
+    <!-- Back Button BELOW the note -->
+    <button class="back-button" onclick="history.back()">← Back</button>
+  </div>
+
+  <footer>
+    &copy; 2025 AI Deck | Built with ❤️ by Students, for the Future of AI
+  </footer>
+
+</body>
+</html>

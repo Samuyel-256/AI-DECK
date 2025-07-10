@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | AI Tools World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/artificial-intelligence.png"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Responsive Navbar Styles */
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      color: #66fcf1;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-container, .user-menu {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1f2833;
+        margin-top: 10px;
+        border-radius: 8px;
+        padding: 10px 0;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
+        text-align: left;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    /* Layout Helper */
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-robot"></i>
+        <span>AI TOOLS WORLD</span>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search AI tools..." />
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="dashboard.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="user-profile">
+          <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="User" />
+          
+            
+            
+          
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Discover the Best AI Tools</h1>
+    <p>Explore our curated collection of cutting-edge AI tools to enhance your productivity and creativity</p>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories-section">
+    <h2>Browse by Category</h2>
+    <div class="category-filters">
+      <button class="category-btn active" data-category="all">All Tools</button>
+      <button class="category-btn" data-category="chatbot">Chatbots</button>
+      <button class="category-btn" data-category="image">Image Generation</button>
+      <button class="category-btn" data-category="text">Text & Writing</button>
+      <button class="category-btn" data-category="voice">Voice & Audio</button>
+      <button class="category-btn" data-category="video">Video Creation</button>
+      <button class="category-btn" data-category="code">Coding</button>
+      <button class="category-btn" data-category="productivity">Productivity</button>
+    </div>
+  </div>
+
+  <!-- Tools -->
+  <div class="tools-section">
+    <div class="tools-header">
+      <h2>AI Tools Collection</h2>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+      </div>
+    </div>
+    <div id="toolContainer"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About AI Tools World</h3>
+        <p>Your one-stop destination for discovering and using the latest AI tools to enhance your productivity and creativity.</p>
+        <div class="social-links">
+         
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> aideck@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 1234567890</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AI Tools World. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- App Init -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      loadTools();              // 🧠 Load the AI tools
+      setupEventListeners();    // ⚙️ Setup category, search, view toggle
+    });
+  </script>
+</body>
+</html>
